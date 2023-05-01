@@ -1,0 +1,12 @@
+name: "Create release and version branch"
+description: "Creates release and version branch"
+author: "MineHub Technologies"
+inputs:
+  github_token:
+    description: "GITHUB_TOKEN. Optional if you use checkout@v2 action."
+    default: "${{ github.token }}"
+  COMMIT_MESSAGE:
+    description: "COMMIT_MESSAGE. The commit message to know which version to increment."
+runs:
+  using: "docker"
+  image: "Dockerfile"
